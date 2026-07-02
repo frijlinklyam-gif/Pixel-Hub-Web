@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Hub - Official Dashboard</title>
+    <!-- Tailwind CSS for modern utility styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Space Grotesk & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for gaming and tech icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        discord: {
+                            blurple: '#5865F2',
+                            green: '#57F287',
+                            yellow: '#FEE75C',
+                            fuchsia: '#EB459E',
+                            red: '#ED4245',
+                            dark: '#313338',
+                            darker: '#2b2d31',
+                            black: '#1e1f22'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar styling to match Discord dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e1f22;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1a1b1e;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #35363c;
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.03); }
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 15px rgba(88, 101, 242, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen selection:bg-discord-blurple selection:text-white overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/60 px-4 py-3 sm:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-gradient-to-tr from-discord-blurple to-indigo-500 p-2.5 rounded-xl shadow-lg shadow-indigo-500/20">
+                    <i class="fa-solid fa-gamepad text-xl text-white"></i>
+                </div>
+                <span class="font-display font-bold text-xl tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-400 bg-clip-text text-transparent">PIXEL HUB</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#rules" class="hover:text-white transition-colors">Rules</a>
+                <a href="#team" class="hover:text-white transition-colors">Admins</a>
+            </div>
+            <div>
+                <a href="https://discord.gg/R4PTEzmWW" target="_blank" class="glow-button px-5 py-2.5 bg-discord-blurple hover:bg-indigo-600 text-white text-sm font-semibold rounded-xl transition-all flex items-center space-x-2 shadow-lg shadow-discord-blurple/20">
+                    <i class="fa-brands fa-discord"></i>
+                    <span>Join Server</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="about" class="relative overflow-hidden py-16 lg:py-24 px-4 sm:px-8 max-w-7xl mx-auto">
+        <!-- Radial Glowing Background Orbs -->
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-fuchsia-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-semibold text-indigo-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                    <span>SERVER ONLINE & READY</span>
+                </div>
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    Welcome to the <br class="hidden sm:inline">
+                    <span class="bg-gradient-to-r from-discord-blurple via-indigo-400 to-fuchsia-400 bg-clip-text text-transparent">Pixel Hub</span> Universe!
+                </h1>
+                <p class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+                    The ultimate digital hang-out for gamers, creators, and developers. Play game-economies, earn custom roles, unlock legendary loot, and chill with a global community.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="https://discord.gg/R4PTEzmWW" target="_blank" class="w-full sm:w-auto px-8 py-3.5 bg-discord-blurple hover:bg-indigo-600 text-white rounded-xl font-semibold transition-all text-center flex items-center justify-center space-x-2 glow-button shadow-lg shadow-indigo-500/10">
+                        <i class="fa-brands fa-discord"></i>
+                        <span>Get Instant Invite</span>
+                    </a>
+                </div>
+                <!-- Mini Stats Counter -->
+                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-900 max-w-md mx-auto lg:mx-0">
+                    <div>
+                        <div class="text-2xl font-bold font-display text-white">420+</div>
+                        <div class="text-xs text-slate-500">Gamers</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold font-display text-emerald-400 flex items-center justify-center lg:justify-start gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> 147
+                        </div>
+                        <div class="text-xs text-slate-500">Active Online</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold font-display text-indigo-400">100%</div>
+                        <div class="text-xs text-slate-500">Gezellig</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Showcase Right Side Card -->
+            <div class="lg:col-span-5 relative">
+                <div class="absolute inset-0 bg-gradient-to-tr from-discord-blurple/30 to-fuchsia-500/10 rounded-2xl blur-xl opacity-50"></div>
+                <div class="relative bg-slate-900/90 border border-slate-800 p-6 rounded-2xl shadow-2xl backdrop-blur-sm">
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <span class="text-xs text-slate-500 font-mono">unbelievaboat.config</span>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 bg-slate-950/80 rounded-xl border border-slate-800/60">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs text-indigo-400 font-semibold uppercase tracking-wider">UnbelievaBoat Shop</span>
+                                <span class="text-xs text-slate-500">Active Items</span>
+                            </div>
+                            <div class="flex items-center justify-between py-2 border-b border-slate-900/60">
+                                <span class="text-sm font-medium"><i class="fa-solid fa-sword text-amber-500 mr-2"></i> Diamond Sword</span>
+                                <span class="text-xs bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded-full font-mono">50k Coins</span>
+                            </div>
+                            <div class="flex items-center justify-between py-2 border-b border-slate-900/60">
+                                <span class="text-sm font-medium"><i class="fa-solid fa-crown text-indigo-400 mr-2"></i> Pixel Elite Role</span>
+                                <span class="text-xs bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded-full font-mono">10k Coins</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Rules Section -->
+    <section id="rules" class="py-16 bg-slate-900/40 border-y border-slate-900 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
+                    📜 The Official <span class="text-discord-blurple">Pixel Rules</span>
+                </h2>
+                <p class="text-slate-400 mt-2">
+                    We maintain an open-minded, high-vibe atmosphere. Ensure you abide by these guidelines inside Pixel Hub!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Rule 1 -->
+                <div class="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl relative overflow-hidden group hover:border-slate-700 transition-all">
+                    <div class="absolute top-0 right-0 p-3 text-slate-800 font-display text-4xl font-black select-none">01</div>
+                    <div class="w-12 h-12 rounded-xl bg-discord-blurple/10 border border-discord-blurple/20 flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-handshake text-xl text-discord-blurple"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Be Respectful</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Treat all members with absolute kindness. Insults, bullying, and toxicity are strictly not tolerated. Keep it friendly and chill!
+                    </p>
+                </div>
+
+                <!-- Rule 2 -->
+                <div class="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl relative overflow-hidden group hover:border-slate-700 transition-all">
+                    <div class="absolute top-0 right-0 p-3 text-slate-800 font-display text-4xl font-black select-none">02</div>
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-earth-americas text-xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">English Only</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        To keep the community connected internationally, all public text and voice channels must remain English. Dutch inside-jokes are occasionally allowed, keep it cozy!
+                    </p>
+                </div>
+
+                <!-- Rule 3 -->
+                <div class="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl relative overflow-hidden group hover:border-slate-700 transition-all">
+                    <div class="absolute top-0 right-0 p-3 text-slate-800 font-display text-4xl font-black select-none">03</div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-shield-halved text-xl text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">No Spam or Advertising</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Do not spam text channels, emojis, or mass-tag roles. No unsolicited advertisements, server link promotions, or DM-advertising.
+                    </p>
+                </div>
+
+                <!-- Rule 4 -->
+                <div class="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl relative overflow-hidden group hover:border-slate-700 transition-all">
+                    <div class="absolute top-0 right-0 p-3 text-slate-800 font-display text-4xl font-black select-none">04</div>
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-user-shield text-xl text-amber-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Follow Admin Guidelines</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Our Co-Admins are here to safeguard the vibe. If an Admin or Moderator instructs you to alter behavior, comply graciously.
+                    </p>
+                </div>
+
+                <!-- Rule 5 -->
+                <div class="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl relative overflow-hidden group hover:border-slate-700 transition-all">
+                    <div class="absolute top-0 right-0 p-3 text-slate-800 font-display text-4xl font-black select-none">05</div>
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-eye-slash text-xl text-rose-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">No NSFW Content</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Keep all graphics, profiles, names, and general conversations safe-for-work. Violations will lead to an immediate ban by Dyno.
+                    </p>
+                </div>
+
+                <!-- Rule 6 -->
+                <div class="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl relative overflow-hidden group hover:border-slate-700 transition-all">
+                    <div class="absolute top-0 right-0 p-3 text-slate-800 font-display text-4xl font-black select-none">06</div>
+                    <div class="w-12 h-12 rounded-xl bg-fuchsia-500/10 border border-fuchsia-500/20 flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-mug-hot text-xl text-fuchsia-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Keep It Gezellig!</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        At the end of the day, it's all about having a great time. Share gaming memes, show your project builds, and chat with cool folks!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin & Crew Showcase Section -->
+    <section id="team" class="py-16 bg-slate-900/20 border-t border-slate-900 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="font-display text-3xl font-extrabold tracking-tight">
+                    👑 The Team At <span class="bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">The Top</span>
+                </h2>
+                <p class="text-slate-400 mt-2">
+                    Commanding, building, and safeguarding the server vibe with complete unity.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Lyam Card -->
+                <div class="bg-slate-900/60 border border-slate-800/80 p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden">
+                    <div class="absolute top-3 right-3 flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-[10px] font-bold text-red-400">
+                        <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                        <span>OWNER</span>
+                    </div>
+                    <!-- Avatar simulated -->
+                    <div class="relative shrink-0">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-rose-600 to-indigo-600 flex items-center justify-center text-3xl font-display font-extrabold text-white border-2 border-slate-800">
+                            L
+                        </div>
+                        <span class="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-emerald-500 border-4 border-slate-900 flex items-center justify-center" title="Online"></span>
+                    </div>
+                    <div class="space-y-2 text-center sm:text-left">
+                        <h3 class="text-xl font-bold text-slate-100 flex items-center justify-center sm:justify-start gap-2">
+                            Lyam <span class="text-xs text-slate-500 font-mono">@lyam</span>
+                        </h3>
+                        <p class="text-xs font-mono text-indigo-400">🛠️ Admin / Developer</p>
+                        <p class="text-slate-400 text-sm">
+                            Chief planner, developer of epic Minecraft boat circuits, and architect of Pixel Hub.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- BennieCool123 Card -->
+                <div class="bg-slate-900/60 border border-slate-800/80 p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden">
+                    <div class="absolute top-3 right-3 flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-[10px] font-bold text-amber-400">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                        <span>CO-ADMIN</span>
+                    </div>
+                    <!-- Avatar simulated -->
+                    <div class="relative shrink-0">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-amber-500 to-yellow-400 flex items-center justify-center text-3xl font-display font-extrabold text-white border-2 border-slate-800">
+                            B
+                        </div>
+                        <span class="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-amber-500 border-4 border-slate-900 flex items-center justify-center" title="Sick but typing">
+                            <span class="text-[9px] text-white">🤒</span>
+                        </span>
+                    </div>
+                    <div class="space-y-2 text-center sm:text-left">
+                        <h3 class="text-xl font-bold text-slate-100 flex items-center justify-center sm:justify-start gap-2">
+                            BennieCool123 <span class="text-xs text-slate-500 font-mono">@benniecool123</span>
+                        </h3>
+                        <p class="text-xs font-mono text-amber-400">👑 Co-Admin / Co-Builder</p>
+                        <p class="text-slate-400 text-sm">
+                            Right-hand strategist. Currently sick but always helping design high-level features!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 px-4 border-t border-slate-900 text-center space-y-4">
+        <div class="flex items-center justify-center space-x-2">
+            <div class="bg-discord-blurple/20 p-2 rounded-lg text-discord-blurple">
+                <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <span class="font-display font-bold text-slate-200">PIXEL HUB</span>
+        </div>
+        <p class="text-xs text-slate-500 max-w-md mx-auto">
+            Not affiliated with Discord Inc. Pixel Hub is a private server community. Built for Lyam and BennieCool123 with 💜 and gezelligheid!
+        </p>
+        <div class="text-slate-600 text-xs">
+            &copy; 2026 Pixel Hub. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
